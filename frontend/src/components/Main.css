@@ -1,0 +1,19 @@
+.Main {
+  min-height: calc(100vh - 50px - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Минимальная высота по вертикали для заполнения всего экрана */
+  background-color: #f0f0f0; /* Цвет фона */
+  padding: 20px; /* Добавляем отступы вокруг содержимого */
+}
+
+.Main h1 {
+  font-size: 24px; /* Размер шрифта для заголовка */
+  margin-bottom: 20px; /* Отступ снизу заголовка */
+}
+
+.Main p {
+  font-size: 16px; /* Размер шрифта для параграфов */
+}

@@ -1,0 +1,61 @@
+/* AddContact.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 50px - 50px);
+  background-color: #f0f0f0; /* Нейтральный цвет фона */
+  
+}
+  
+  .container-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 80%; /* Ширина контейнера со списком контактов */
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+    padding: 25px; /* Внутренний отступ */
+    background-color: #ffffff; /* Цвет фона контейнера */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень */
+  }
+    
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container-list select  {
+    margin: 10px 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }

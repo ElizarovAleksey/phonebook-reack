@@ -1,0 +1,112 @@
+.phone-directory {
+  min-height: calc(100vh - 100px - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.phone-directory select, 
+.phone-directory button {
+  margin: 10px 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls select {
+  appearance: none;
+}
+
+.pagination-controls button {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+h2, h3, h4 {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+h3, h4 {
+  margin-left: 20px;
+}
+
+h4 {
+  margin-left: 40px;
+}
+
+/* Задаем ширину для каждого столбца таблицы */
+.phone-directory th:nth-child(1),
+.phone-directory td:nth-child(1) { width: 35%; }
+
+.phone-directory th:nth-child(2),
+.phone-directory td:nth-child(2) { width: 30%; }
+
+.phone-directory th:nth-child(3),
+.phone-directory td:nth-child(3),
+.phone-directory th:nth-child(4),
+.phone-directory td:nth-child(4),
+.phone-directory th:nth-child(5),
+.phone-directory td:nth-child(5) { width: 15%; }
+
+.phone-directory th:nth-child(6),
+.phone-directory td:nth-child(6),
+.phone-directory th:nth-child(7),
+.phone-directory td:nth-child(7),
+.phone-directory th:nth-child(8),
+.phone-directory td:nth-child(8) { width: 20%; word-wrap: break-word;}
+
+.phone-directory tbody tr:nth-child(even) { background-color: #f8f8f8; }
+
+.contact-row {
+  transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+.contact-row:hover {
+  background-color: #f2f2f2; /* Светло-серый фон при наведении */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

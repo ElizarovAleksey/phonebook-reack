@@ -1,0 +1,288 @@
+[{
+  "_id": {
+    "$oid": "6608052981cb4ff05004bbf9"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "11",
+  "fullName": "Сидоров Сидр Сидорович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608052f81cb4ff05004bbfb"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Иванов Иван Иванович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608053181cb4ff05004bbfc"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Иванов Иван Иванович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608053381cb4ff05004bbfd"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Иванов Иван Иванович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608053581cb4ff05004bbfe"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Иванов Иван Иванович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660833f00d3484d8bd4cb542"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент производства",
+  "subdivision": "Отдел контроля",
+  "office": "323",
+  "fullName": "Петров Петр Петрович",
+  "position": "Начальник",
+  "officePhone": "8 999 000 00 00",
+  "internalPhone": "21",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "adsasdasdasdasd@asd.asd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660838f581cb4ff05004bc0f"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент производства",
+  "subdivision": "Отдел контроля",
+  "office": "323",
+  "fullName": "Петров Петр Петрович",
+  "position": "Начальник",
+  "officePhone": "8 999 000 00 00",
+  "internalPhone": "21",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "adsasdasdasdasd@asd.asd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660838f781cb4ff05004bc10"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Сидоров Сидр Сидорович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660838f981cb4ff05004bc11"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Сидоров Сидр Сидорович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608395181cb4ff05004bc12"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент производства",
+  "subdivision": "Отдел контроля",
+  "office": "323",
+  "fullName": "Петров Петр Петрович",
+  "position": "Начальник",
+  "officePhone": "8 999 000 00 00",
+  "internalPhone": "21",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "adsasdasdasdasd@asd.asd",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608395481cb4ff05004bc13"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Сидоров Сидр Сидорович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6608395681cb4ff05004bc14"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №1",
+  "subdivision": "Отдел департамента по департаментам",
+  "office": "012",
+  "fullName": "Сидоров Сидр Сидорович",
+  "position": "Директор",
+  "officePhone": "8 000 00 42311",
+  "internalPhone": "000",
+  "mobilePhone": "8 000 000 00 00",
+  "email": "ada@as.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660839ab81cb4ff05004bc15"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №2",
+  "subdivision": "Отдел по отедлам",
+  "office": "091",
+  "fullName": "Петров Петр Петрович",
+  "position": "Заместитель директора",
+  "officePhone": "8 999 999 99 99",
+  "internalPhone": "091",
+  "mobilePhone": "8888 888 88 88",
+  "email": "adkkakak@kka.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660839ad81cb4ff05004bc16"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №2",
+  "subdivision": "Отдел по отедлам",
+  "office": "091",
+  "fullName": "Петров Петр Петрович",
+  "position": "Заместитель директора",
+  "officePhone": "8 999 999 99 99",
+  "internalPhone": "091",
+  "mobilePhone": "8888 888 88 88",
+  "email": "adkkakak@kka.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660839b081cb4ff05004bc17"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №2",
+  "subdivision": "Отдел по отедлам",
+  "office": "091",
+  "fullName": "Петров Петр Петрович",
+  "position": "Заместитель директора",
+  "officePhone": "8 999 999 99 99",
+  "internalPhone": "091",
+  "mobilePhone": "8888 888 88 88",
+  "email": "adkkakak@kka.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660974d70d3484d8bd4cb559"
+  },
+  "organization": "Компания №2",
+  "department": "Отел по производству",
+  "subdivision": "",
+  "office": "43",
+  "fullName": "Михайлов Михаил Михайлович",
+  "position": "Заведующий",
+  "officePhone": "8 999 99 999 99",
+  "internalPhone": "43",
+  "mobilePhone": "8 000 00 000 00 00",
+  "email": "dadasdas.asaasaasa@asd.asa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660975b20d3484d8bd4cb55d"
+  },
+  "organization": "Компания №1",
+  "department": "Департамент №2",
+  "subdivision": "Отдел по производству отдело",
+  "office": "54",
+  "fullName": "Геннадьев Геннадий Геннадьевич ",
+  "position": "Начальник отдела",
+  "officePhone": "8 999 99 999 22 22",
+  "internalPhone": "121",
+  "mobilePhone": "8 999 999 99 99",
+  "email": "asdasdasdadasa@asddasa.as",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660ad88dc1dab056ffbe74c5"
+  },
+  "organization": "Компания №3",
+  "department": "Отдел по контролю качества обслуживания",
+  "subdivision": "",
+  "office": "12",
+  "fullName": "Иванова Марья Сергеевна",
+  "position": "Начальник отдела",
+  "officePhone": "8 343 90 099 99 99",
+  "internalPhone": "423",
+  "mobilePhone": "8 999 999 99 99",
+  "email": "adssaadsa.sdsa@sad.sd",
+  "__v": 0
+}]

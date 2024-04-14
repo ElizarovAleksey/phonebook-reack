@@ -1,0 +1,43 @@
+/* ImportPage.css */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 50px - 50px);
+    background-color: #f0f0f0; /* цвет фона */
+}
+.container {
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .title {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .containerDownload {
+    margin: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
