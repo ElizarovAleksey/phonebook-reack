@@ -29,7 +29,6 @@ const Main = () => {
         <p>Загрузка...</p>
       ) : (
         <div>
-          <h1>Список контактов</h1>
           <PhoneDirectory data={contacts} />
         </div>
       )}

@@ -3,21 +3,29 @@ const Organization = require('./models/Organization');
 
 async function addContact(req, res) {
   console.log(req.body);
-  // Предположим, новая организация передаётся специальным образом или в req.body есть флаг
-  if (req.body.isNewOrganization) {
-    // Логика создания новой организации и получения её _id
-    const newOrganization = new Organization({ name: req.body.newOrganizationName });
-    const savedOrganization = await newOrganization.save();
-    req.body.organization = savedOrganization._id; // Присваиваем _id новой организации
-  }
-
-  // Удаление лишних полей из req.body, если они есть
-  delete req.body.isNewOrganization;
-  delete req.body.newOrganizationName;
 
   try {
+    let organizationId = req.body.organization; // Получаем идентификатор организации из запроса
+
+    // Проверяем, нужно ли добавлять новую организацию
+    if (req.body.isNewOrganization) {
+      const newOrganization = new Organization({ name: req.body.newOrganizationName });
+      const savedOrganization = await newOrganization.save();
+      organizationId = savedOrganization._id; // Присваиваем _id новой организации
+      console.log('Создана новая организация с ID:', organizationId);
+    }
+
+    // Удаляем лишние поля из req.body, если они есть
+    delete req.body.isNewOrganization;
+    delete req.body.newOrganizationName;
+
+    // Добавляем поле organization с идентификатором
+    req.body.organization = organizationId;
+
     const newContact = new Contact(req.body);
-    await newContact.save();
+    const savedContact = await newContact.save();
+    console.log('Добавлен новый контакт:', savedContact);
+
     res.status(201).send('Контакт успешно добавлен');
   } catch (error) {
     console.error("Ошибка при добавлении контакта:", error);

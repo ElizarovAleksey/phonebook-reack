@@ -1,10 +1,9 @@
-//PhoneDirectory
 import React, { useState, useEffect } from 'react';
 import './PhoneDirectory.css';
 import { paginationsUrl } from './endpoints';
 import { organizationsUrl } from './endpoints';
 
-
+// Определяем функцию для группировки данных
 function groupData(data) {
   const groupedData = {};
   data.forEach(employee => {
@@ -34,7 +33,6 @@ const PhoneDirectory = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    // Формирование строки запроса с учётом пагинации, фильтра и поиска
     const queryParams = new URLSearchParams({
       page: currentPage,
       size: contactsPerPage,
@@ -43,10 +41,14 @@ const PhoneDirectory = () => {
     }).toString();
   
     const fetchFilteredContacts = async () => {
-      const response = await fetch(`${paginationsUrl}?${queryParams}`);
-      const { items, totalItems } = await response.json();
-      setGroupedData(groupData(items));
-      setTotalItems(totalItems);
+      try {
+        const response = await fetch(`${paginationsUrl}?${queryParams}`);
+        const { items, totalItems } = await response.json();
+        setGroupedData(groupData(items));
+        setTotalItems(totalItems);
+      } catch (error) {
+        console.error('Ошибка при получении данных:', error);
+      }
     };
     fetchFilteredContacts();
   }, [currentPage, contactsPerPage, filter, searchQuery]);
@@ -71,18 +73,23 @@ const PhoneDirectory = () => {
 
   useEffect(() => {
     const fetchOrganizationNames = async () => {
-      const response = await fetch(`${organizationsUrl}`);
-      const organizationsData = await response.json();
-      const organizationsMap = organizationsData.reduce((acc, org) => ({ ...acc, [org._id]: org.name }), {});
-      setOrganizations(organizationsMap);
+      try {
+        const response = await fetch(`${organizationsUrl}`);
+        const organizationsData = await response.json();
+        const organizationsMap = organizationsData.reduce((acc, org) => ({ ...acc, [org._id]: org.name }), {});
+        setOrganizations(organizationsMap);
+      } catch (error) {
+        console.error('Ошибка при загрузке организаций:', error);
+      }
     };
     fetchOrganizationNames();
   }, []);
-  
+
   const handleFilterChange = (e) => {
-    setFilter(e.target.value); // Теперь filter хранит orgId выбранной организации
+    setFilter(e.target.value);
     setCurrentPage(1);
   };
+
   const totalPages = Math.ceil(totalItems / contactsPerPage);
 
   const toggleGroup = (orgId, dept, sub = null) => {
@@ -93,10 +100,8 @@ const PhoneDirectory = () => {
       if (!newState[orgId][dept]) newState[orgId][dept] = {};
   
       if (sub === null) {
-        // Если нет sub, переключаем видимость всего департамента
         newState[orgId][dept] = !(newState[orgId][dept] || false);
       } else {
-        // Если есть sub, переключаем видимость конкретного подразделения
         newState[orgId][dept][sub] = !(newState[orgId][dept][sub] || false);
       }
       return newState;
@@ -106,42 +111,36 @@ const PhoneDirectory = () => {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
-   
-//console.log('Organizations:', organizations);
-//console.log('GroupedData keys:', Object.keys(groupedData));
+  
   return (
     <div className="phone-directory">
-      <input
-  type="text"
-  placeholder="Поиск..."
-  value={searchQuery}
-  onChange={handleSearchChange}
-/>
-      {/* Выпадающий список организаций */}
-      <select onChange={handleFilterChange} value={filter}>
-        <option value="">Все организации</option>
-        {Object.keys(organizations).map(orgId =>
-         (
-          <option key={orgId} value={orgId}>{organizations[orgId]}</option>
-          /* console.log('orgId:', orgId, 'Organization Name:', organizations[orgId]) */
-        ))}
-      </select>
-  
-      {/* Перебор организаций */}
+      <div className="search-controls">
+        <input
+          type="text"
+          placeholder="Поиск..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+        <select onChange={handleFilterChange} value={filter}>
+          <option value="">Все организации</option>
+          {Object.keys(organizations).map(orgId => (
+            <option key={orgId} value={orgId}>{organizations[orgId]}</option>
+          ))}
+        </select>
+      </div>
+
       {Object.keys(groupedData).map(orgId => (
-  <React.Fragment key={orgId}>
-    <h2>{organizations[orgId] || 'Загрузка...'}</h2>
-          {/* Перебор департаментов */}
+        <React.Fragment key={orgId}>
+          <h2>{organizations[orgId] || 'Загрузка...'}</h2>
           {groupedData[orgId] && Object.keys(groupedData[orgId]).map(dept => (
             <React.Fragment key={dept}>
               <h3 onClick={() => toggleGroup(orgId, dept)}>{dept}</h3>
-              {/* Перебор подразделений */}
               {groupedData[orgId][dept] && Object.keys(groupedData[orgId][dept]).map(sub => (
                 <div key={sub}>
-                  <h4 onClick={() => toggleGroup(orgId, dept, sub)}>
-                    {sub} ({expandedGroups[orgId] && expandedGroups[orgId][dept] && expandedGroups[orgId][dept][sub] ? 'Скрыть' : 'Раскрыть'})
+                  <h4 className="h4-toggle" onClick={() => toggleGroup(orgId, dept, sub)}>
+                    {sub}
+                    <span>{expandedGroups[orgId] && expandedGroups[orgId][dept] && expandedGroups[orgId][dept][sub] ? 'Скрыть' : 'Раскрыть'}</span>
                   </h4>
-                  {/* Таблица контактов */}
                   {expandedGroups[orgId]?.[dept]?.[sub] && (
                     <table>
                       <thead>
@@ -157,7 +156,6 @@ const PhoneDirectory = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {/* Перебор и отображение контактов в подразделении */}
                         {groupedData[orgId][dept][sub].map(employee => (
                           <tr key={employee._id} className="contact-row">
                             <td>{employee.fullName}</td>
@@ -167,7 +165,7 @@ const PhoneDirectory = () => {
                             <td>{employee.mobilePhone}</td>
                             <td>{employee.email}</td>
                             <td>{employee.subdivision}</td>
-                            <td>{employee.office}</td>                          
+                            <td>{employee.office}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -179,7 +177,7 @@ const PhoneDirectory = () => {
           ))}
         </React.Fragment>
       ))}
-      {/* Контролы пагинации */}
+
       <div className="pagination-controls">
         <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))} disabled={currentPage === 1}>Назад</button>
         <span>Страница {currentPage} из {totalPages}</span>

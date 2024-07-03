@@ -4,7 +4,7 @@ const router = express.Router();
 const {addContact} = require('./createControllers');
 const contactRouter = require('./getContactRouter');
 const editContactsRoutes = require('./editContactsRoutes');
-const {searchContactsByName} = require('./searchContacts');
+const {searchContacts} = require('./searchContacts');
 const authController = require('./authController');
 const registrationController = require('./registrationController');
 const userController = require('./userController');
@@ -21,7 +21,7 @@ router.post('/change-email/:id', userController.changeEmail);
 router.post('/contacts', addContact);
 
 // Маршрут для поиска контактов по имени
-router.get('/contacts/search', searchContactsByName);
+router.get('/contacts/search', searchContacts);
 
 // Маршрут для получения всех контактов
 router.use('/contacts', contactRouter);
